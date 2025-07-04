@@ -1,0 +1,30 @@
+{
+  "name": "proyecto/seguridad-software",
+  "description": "Proyecto Laravel de ejemplo con vulnerabilidades",
+  "type": "project",
+  "require": {
+    "php": "^7.4|^8.0",
+    "fideloper/proxy": "^4.4",
+    "fruitcake/laravel-cors": "^2.0",
+    "guzzlehttp/guzzle": "^7.0.1",
+    "laravel/framework": "^8.0",
+    "laravel/tinker": "^2.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    },
+    "classmap": [
+      "database/seeds",
+      "database/factories"
+    ]
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover --ansi"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
