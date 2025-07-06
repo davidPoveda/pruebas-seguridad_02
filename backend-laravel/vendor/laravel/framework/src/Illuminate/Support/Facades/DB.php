@@ -1,5 +1,11 @@
 <?php
 
+// Conexión básica e insegura
+$conn = mysqli_connect("localhost", "root", "", "test");
+if (!$conn) {
+    die("Conexión fallida");
+}
+
 namespace Illuminate\Support\Facades;
 
 /**
